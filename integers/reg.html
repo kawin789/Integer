@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fffdfd;
+        }
+        .container {
+            background-color: #d8c67d;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20%;
+            border:3px solid #333;
+        }
+        form {
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 3px solid ;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .checkbox-group label {
+            width: auto;
+        }
+        .policy-container {
+            position: relative;
+            bottom: 10px;
+        }
+        .policy-container input {
+            position: relative;
+            left: 30%;
+            top:30px;
+
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+        h1{
+            color: #d8c67d;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 40%;
+            
+        }
+    </style>
+</head>
+<body style="background-image: url(./img/half.jpg);">
+    <h1>Registration Form</h1>
+    <div class="container">
+        
+        <form id="registrationForm">
+           
+        
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <label for="skills">Skills (e.g., Boxing, Karate):</label>
+            <input type="text" id="skills" name="skills" required>
+
+            <label for="experience">Experience:</label>
+            <select id="experience" name="experience" required>
+                <option value="">Select</option>
+                <option value="police">Police</option>
+                <option value="military">Military</option>
+                <option value="ncc">NCC</option>
+                <option value="nss">NSS</option>
+                <option value="teacher">Teacher</option>
+                <option value="politician">Politician</option>
+                <option value="others">Others</option>
+            </select>
+
+            <label>Squad:</label>
+            <select id="squad" name="experience" required>
+                <option value="">Select</option>
+                <option value="Iron Squad">Iron Squad</option>
+                <option value="Shield Squad">Shield Squad</option>
+                <option value="Web Squad">Web Squad</option>
+                <option value="Gun Squad">Gun Squad</option>
+                <option value="Arrow Squad">Arrow Squad</option>
+                <option value="Hammer Squad">Hammer Squad</option>
+            </select>
+            <div class="policy-container">
+                <input type="checkbox" id="policy" name="policy" required>
+                <label for="policy">Its more confidencial,So accept our agree to the policy</label>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            if (document.getElementById("policy").checked) {
+                alert("Form submitted successfully!");
+            } else {
+                alert("You must agree to the policy to register.");
+            }
+        });
+    </script>
+</body>
+</html>

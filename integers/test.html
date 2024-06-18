@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: background-color 0.3s ease;
+            width: 250px;
+        }
+        .button img {
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+        }
+        .whatsapp { background-color: #25D366; }
+        .whatsapp:hover { background-color: #1DA851; }
+        .instagram { background-color: #E1306C; }
+        .instagram:hover { background-color: #C12D5E; }
+        .youtube { background-color: #FF0000; }
+        .youtube:hover { background-color: #CC0000; }
+        .linkedin { background-color: #0077B5; }
+        .linkedin:hover { background-color: #005E93; }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://wa.me/YOURNUMBER" class="button whatsapp" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp Icon">WhatsApp
+        </a>
+        <a href="https://www.instagram.com/YOURUSERNAME" class="button instagram" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram Icon">Instagram
+        </a>
+        <a href="https://www.youtube.com/channel/YOURCHANNEL" class="button youtube" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube Icon">YouTube
+        </a>
+        <a href="https://www.linkedin.com/in/YOURPROFILE" class="button linkedin" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/linkedin.png" alt="LinkedIn Icon">LinkedIn
+        </a>
+    </div>
+</body>
+</html>

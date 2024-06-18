@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+           
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-image: url(./img/half.jpg);
+            background-color: #000; 
+            background-repeat: no-repeat;
+            background-size: 1470px 750px;
+        }
+
+        .marquee-container {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            margin-bottom: 10%;
+            margin-top: -20%;
+        }
+
+        h2 {
+            color: rgba(235, 170, 73, 0.918);
+            text-shadow: 10px 10px 20px rgb(255, 255, 255);
+            margin: 10px 0;
+        }
+
+        .login-container {
+            background-color:#c7ba84;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: -20%;
+        }
+
+        .login-container h2 {
+            color: #000;
+            text-align: center;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"],
+        .login-container button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px double #000;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .login-container button[type="submit"] {
+            background-color: #000;
+            color: rgb(219, 215, 172);
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-container button[type="submit"]:hover {
+            background-color: #40403e;
+        }
+
+        .login-container p {
+            text-align: center;
+        }
+
+        .login-container a {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="marquee-container">
+        <marquee behavior="scroll" direction="right" scrollamount="15">
+            <h2>⚔️ Welcome to INTEGERS ⚔️</h2>
+        </marquee>
+        <marquee behavior="scroll" direction="left" scrollamount="15">
+            <h2>⚔️ Welcome to INTEGERS ⚔️</h2>
+        </marquee>
+    </div>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <button type="submit" onclick="window.location.href = 'http://127.0.0.1:5500/home.html';">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+</body>
+
+</html>
